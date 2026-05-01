@@ -1,0 +1,6 @@
+artifacts
+tools
+.tools
+.vercel
+.vercel-data
+.vercel-config
