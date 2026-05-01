@@ -1,0 +1,6 @@
+.vercel
+.vercel-data
+.vercel-config
+artifacts
+.DS_Store
+Thumbs.db
