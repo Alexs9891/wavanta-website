@@ -1,0 +1,932 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Wavanta helps growing businesses adopt and implement AI through workflow automation, AI assistants, task-focused agents, team enablement and practical governance."
+    />
+    <meta
+      property="og:title"
+      content="Wavanta | Practical AI automation and adoption"
+    />
+    <meta
+      property="og:description"
+      content="Practical AI support for growing businesses, from discovery and governance to workflow automation, team enablement and AI assistants."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.wavanta.ai/" />
+    <meta
+      property="og:image"
+      content="https://www.wavanta.ai/assets/wavanta-gradient-banner.png"
+    />
+    <meta name="theme-color" content="#192373" />
+    <title>
+      Wavanta | Practical AI automation and adoption for growing businesses
+    </title>
+    <link rel="canonical" href="https://www.wavanta.ai/" />
+    <link rel="icon" href="/assets/favicon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <svg class="icon-sprite" aria-hidden="true" focusable="false">
+      <symbol id="icon-discover" viewBox="0 0 24 24">
+        <path d="M5 17.5c3.4-2.5 6.2-2.5 9.4 0 1.8 1.4 3.3 1.4 4.6 0" />
+        <circle cx="12" cy="11" r="5.4" />
+        <path d="m14 9-1.2 3.2L9.6 13.4l1.2-3.2L14 9Z" />
+        <path d="M12 3.7v1.4" />
+        <path d="M12 16.9v1.4" />
+      </symbol>
+      <symbol id="icon-automate" viewBox="0 0 24 24">
+        <path d="M5 7.5h5.5c2.1 0 3.5 1.3 3.5 3.2v2.6c0 1.9 1.4 3.2 3.5 3.2H19" />
+        <path d="m16.5 14 2.5 2.5-2.5 2.5" />
+        <circle cx="5" cy="7.5" r="2" />
+        <circle cx="19" cy="16.5" r="2" />
+        <circle cx="12" cy="12" r="1.8" />
+      </symbol>
+      <symbol id="icon-enable" viewBox="0 0 24 24">
+        <path d="M8.8 13.8c-.8-.8-1.3-1.9-1.3-3.1a4.5 4.5 0 0 1 9 0c0 1.2-.5 2.3-1.3 3.1-.7.7-1.1 1.1-1.1 2.1H9.9c0-1-.4-1.4-1.1-2.1Z" />
+        <path d="M10 19h4" />
+        <path d="M9.8 16h4.4" />
+        <circle cx="5.2" cy="17.2" r="1.8" />
+        <circle cx="18.8" cy="17.2" r="1.8" />
+        <path d="M7 16.8c1.1-.6 2.1-.6 3 0" />
+        <path d="M14 16.8c1-.6 2-.6 3 0" />
+      </symbol>
+      <symbol id="icon-govern" viewBox="0 0 24 24">
+        <path d="M12 3.8 18.5 6.5v5.1c0 4-2.4 7.1-6.5 8.9-4.1-1.8-6.5-4.9-6.5-8.9V6.5L12 3.8Z" />
+        <path d="m9.4 12 1.7 1.8 3.7-4.2" />
+        <path d="M7.4 17c2.9-1.3 6.1-1.3 9.2 0" />
+      </symbol>
+      <symbol id="icon-build" viewBox="0 0 24 24">
+        <path d="M8 5h5v5H8V5Z" />
+        <path d="M14 11h5v5h-5v-5Z" />
+        <path d="M5 14h5v5H5v-5Z" />
+        <path d="M10.5 10v4" />
+        <path d="M13 13.5h1" />
+        <path d="M10 16.5h4" />
+      </symbol>
+      <symbol id="icon-workflow" viewBox="0 0 24 24">
+        <path d="M5 8h5.4c2.2 0 3.6 1.3 3.6 3.2v1.6c0 1.9 1.4 3.2 3.6 3.2H19" />
+        <path d="M16.6 13.7 19 16l-2.4 2.3" />
+        <circle cx="5" cy="8" r="1.8" />
+        <circle cx="12" cy="12" r="1.8" />
+      </symbol>
+      <symbol id="icon-measure" viewBox="0 0 24 24">
+        <path d="M4.5 18.5h15" />
+        <path d="M7.5 15.5v-4" />
+        <path d="M12 15.5v-7" />
+        <path d="M16.5 15.5v-5.5" />
+        <path d="M5.5 8.4c3.3-2 6.5-2 9.6 0 1.4.9 2.6.9 3.4 0" />
+      </symbol>
+      <symbol id="icon-control" viewBox="0 0 24 24">
+        <path d="M4.5 7.5h15" />
+        <path d="M4.5 16.5h15" />
+        <circle cx="9" cy="7.5" r="2" />
+        <circle cx="15" cy="16.5" r="2" />
+        <path d="M6 12c3.2-1.3 7-1.3 11 0" />
+      </symbol>
+      <symbol id="icon-scale" viewBox="0 0 24 24">
+        <path d="M5 18.5c3-4.6 7.6-8.4 14-11.5" />
+        <path d="M13.5 6.2H19v5.5" />
+        <path d="M5 15.2v3.3h3.4" />
+        <path d="M6.5 10.5c2.8-1.2 5.2-1.2 7.2 0" />
+      </symbol>
+      <symbol id="icon-chat" viewBox="0 0 24 24">
+        <path d="M5 5h14v9.5H10l-5 4V5Z" />
+        <path d="M8.5 9h5.5" />
+        <path d="M8.5 12h7" />
+        <path d="M11 16.5c2.2-.8 4.1-.8 5.8 0" />
+      </symbol>
+      <symbol id="icon-search" viewBox="0 0 24 24">
+        <circle cx="10.5" cy="10.5" r="4.8" />
+        <path d="m14.3 14.3 4.2 4.2" />
+        <path d="M5.5 16.5c2.3-1.2 4.5-1.2 6.8 0" />
+        <circle cx="17.8" cy="6.2" r="1.2" />
+      </symbol>
+      <symbol id="icon-document" viewBox="0 0 24 24">
+        <path d="M7 3.8h7l4 4V20H7V3.8Z" />
+        <path d="M14 3.8v4.7h4.7" />
+        <path d="M9.8 12.2h5.8" />
+        <path d="M9.8 15.6c2-.9 3.8-.9 5.8 0" />
+      </symbol>
+      <symbol id="icon-meeting" viewBox="0 0 24 24">
+        <path d="M5 5h14v14H5V5Z" />
+        <path d="M8 3.8v2.8" />
+        <path d="M16 3.8v2.8" />
+        <path d="M8.2 11h5.3" />
+        <path d="m14.5 15 1.2 1.2 2.2-2.6" />
+      </symbol>
+      <symbol id="icon-crm" viewBox="0 0 24 24">
+        <circle cx="8" cy="8" r="2.5" />
+        <path d="M4.8 15.8c1.8-1.5 4.6-1.5 6.4 0" />
+        <path d="M14 5.5h5v5h-5v-5Z" />
+        <path d="M14 14h5v5h-5v-5Z" />
+        <path d="M10.5 9.8 14 8" />
+        <path d="M10.8 14.8 14 16.5" />
+      </symbol>
+      <symbol id="icon-content" viewBox="0 0 24 24">
+        <path d="M5.5 6h6v4.5h-6V6Z" />
+        <path d="M12.5 13.5h6V18h-6v-4.5Z" />
+        <path d="M8.5 13c2.4-1.2 4.8-1.2 7 0" />
+        <path d="m16.2 10.6 2.3 2.4-2.3 2.4" />
+      </symbol>
+      <symbol id="icon-route" viewBox="0 0 24 24">
+        <path d="M5 6.5h5.5c2.1 0 3.5 1.3 3.5 3.1v1.3" />
+        <path d="M14 10.9c0 1.8 1.4 3.1 3.5 3.1H19" />
+        <path d="M14 10.9c0 1.8-1.4 3.1-3.5 3.1H9" />
+        <circle cx="5" cy="6.5" r="1.8" />
+        <circle cx="19" cy="14" r="1.8" />
+        <path d="m16.8 11.8 2.2 2.2-2.2 2.2" />
+      </symbol>
+    </svg>
+
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="brand" href="#home" aria-label="Wavanta home">
+        <img
+          class="brand-logo"
+          src="/assets/wavanta-logo-white.png"
+          alt="Wavanta"
+          width="2036"
+          height="353"
+        />
+      </a>
+
+      <input class="menu-toggle" type="checkbox" id="menu-toggle" />
+      <label class="menu-button" for="menu-toggle" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav class="nav-links" aria-label="Site navigation">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#approach">Approach</a>
+        <a href="#about">About</a>
+        <a href="#insights">Insights</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a class="header-action" href="#contact">Book a discovery call</a>
+    </header>
+
+    <main id="home">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Practical AI support</p>
+          <h1 id="hero-title">
+            Practical AI support for the work your business already does
+          </h1>
+          <p class="hero-copy">
+            Wavanta helps growing businesses turn AI from scattered
+            experimentation into measurable improvements across everyday work –
+            one workflow at a time.
+          </p>
+          <p class="hero-support">
+            AI adoption doesn’t need to start with a sweeping transformation
+            programme. It can start with one clear pressure point, one
+            repeatable task or one team that needs a better way to work.
+          </p>
+          <p class="hero-note">
+            Start where the value is clearest. Build the right foundations
+            around it. Scale what works.
+          </p>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button button-primary" href="#contact"
+              >Book a free AI discovery call</a
+            >
+            <a class="button button-secondary" href="#services"
+              >Explore our services</a
+            >
+          </div>
+          <div class="proof-grid" aria-label="Wavanta proof points">
+            <span><strong>Workflow-first</strong> AI adoption</span>
+            <span><strong>Fixed-scope</strong> projects with measurable outcomes</span>
+            <span><strong>Practical build</strong> automation, assistants and agents</span>
+            <span><strong>Governed use</strong> team enablement and guardrails</span>
+            <span><strong>Tool-aware</strong> designed around your current stack</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-light" aria-labelledby="problem-title">
+        <div class="section-inner split">
+          <div>
+            <p class="section-kicker">The adoption gap</p>
+            <h2 id="problem-title">
+              AI use is rising. Repeatable value is still the hard part.
+            </h2>
+          </div>
+          <div class="copy-stack">
+            <p>
+              Many businesses are already using AI somewhere. A few people are
+              drafting faster, summarising documents or experimenting with new
+              tools. But without shared rules, clear use cases and a way to
+              measure impact, progress stays patchy.
+            </p>
+            <p>
+              Teams try different approaches. Outputs vary. Sensitive data rules
+              are unclear. Manual processes remain exactly as manual as before.
+              Leaders know AI matters, but still struggle to see where it fits
+              and what value it’s creating.
+            </p>
+            <p>
+              Wavanta helps close that gap by connecting AI to the work your
+              business already does. We identify where AI can save time, reduce
+              rework, improve consistency and free people from avoidable admin.
+            </p>
+            <p>
+              Not vague potential. Not experimentation in the dark. Practical
+              capability your team can use, measure and improve.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-blue" aria-labelledby="starting-title">
+        <div class="section-inner feature-band">
+          <div>
+            <p class="section-kicker">Start where the value is clearest</p>
+            <h2 id="starting-title">
+              You don’t need a grand AI plan before you make progress.
+            </h2>
+          </div>
+          <div class="copy-stack">
+            <p>
+              Some businesses come to Wavanta with a workflow they already want
+              to automate. Others need clearer rules, team training or a
+              sharper view of where AI could make the biggest difference.
+            </p>
+            <p>
+              You can begin with the pressure in front of you – a policy gap, a
+              training need, a manual process, a knowledge bottleneck or a
+              higher-value AI idea – then build the right foundations around it
+              as your capability grows.
+            </p>
+            <a class="text-link" href="#services">Find your starting point</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="services" aria-labelledby="services-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="section-kicker">Services</p>
+            <h2 id="services-title">
+              AI support that moves you from idea to everyday capability
+            </h2>
+            <p>
+              Wavanta supports the full AI adoption spectrum: discovery,
+              workflow automation, team enablement, practical governance and
+              more bespoke AI build support.
+            </p>
+            <p>
+              Each service is designed to create a clear next step, a visible
+              outcome and a reusable pattern your business can build on.
+            </p>
+          </div>
+
+          <div class="service-grid">
+            <article class="service-card">
+              <span class="card-icon" aria-hidden="true">
+                <svg><use href="#icon-discover"></use></svg>
+              </span>
+              <span class="card-number">01</span>
+              <h3>AI Discover</h3>
+              <p class="card-subtitle">Find the clearest place to start</p>
+              <p>
+                For businesses that know AI could help, but need to move from
+                broad possibility to a practical first move.
+              </p>
+              <p>
+                We map your workflows, surface realistic opportunities and
+                recommend where AI is most likely to create measurable value
+                first.
+              </p>
+              <p class="best-for">
+                Best for: "We know AI matters, but we need clarity on where it
+                fits."
+              </p>
+              <a class="card-link" href="#contact">Explore AI Discover</a>
+            </article>
+
+            <article class="service-card service-card-featured">
+              <span class="service-badge">Strong starting point</span>
+              <span class="card-icon" aria-hidden="true">
+                <svg><use href="#icon-automate"></use></svg>
+              </span>
+              <span class="card-number">02</span>
+              <h3>AI Automate</h3>
+              <p class="card-subtitle">
+                Remove manual effort from repeatable work
+              </p>
+              <p>
+                For businesses with a process, bottleneck or admin-heavy task
+                that needs to run more smoothly.
+              </p>
+              <p>
+                We design and implement AI-supported workflows, lightweight
+                automations, internal assistants and task-focused agents inside
+                the tools your team already uses.
+              </p>
+              <p class="best-for">
+                Best for: "We want this workflow to take less time, create less
+                rework and run more consistently."
+              </p>
+              <a class="card-link" href="#contact">Explore AI Automate</a>
+            </article>
+
+            <article class="service-card">
+              <span class="card-icon" aria-hidden="true">
+                <svg><use href="#icon-enable"></use></svg>
+              </span>
+              <span class="card-number">03</span>
+              <h3>AI Enable</h3>
+              <p class="card-subtitle">Turn curiosity into capability</p>
+              <p>
+                Practical training, role-specific use cases, prompt libraries,
+                workflow playbooks and repeatable templates so teams know how
+                to use AI safely, effectively and consistently in real work.
+              </p>
+              <p class="best-for">
+                Best for: "Our teams need a best-practice way to use AI day to
+                day."
+              </p>
+              <a class="card-link" href="#contact">Explore AI Enable</a>
+            </article>
+
+            <article class="service-card">
+              <span class="card-icon" aria-hidden="true">
+                <svg><use href="#icon-govern"></use></svg>
+              </span>
+              <span class="card-number">04</span>
+              <h3>AI Govern</h3>
+              <p class="card-subtitle">Put practical guardrails around AI use</p>
+              <p>
+                For businesses already experimenting with AI and needing more
+                control, confidence and consistency.
+              </p>
+              <p>
+                We help define clear usage rules, data handling standards,
+                approved tools, human review points and decision rights.
+              </p>
+              <p class="best-for">
+                Best for: "People are using AI, but we need clearer rules
+                before it spreads further."
+              </p>
+              <a class="card-link" href="#contact">Explore AI Govern</a>
+            </article>
+
+            <article class="service-card service-card-wide">
+              <span class="card-icon" aria-hidden="true">
+                <svg><use href="#icon-build"></use></svg>
+              </span>
+              <span class="card-number">05</span>
+              <h3>AI Build</h3>
+              <p class="card-subtitle">
+                Prove higher-value AI ideas before you scale
+              </p>
+              <p>
+                For opportunities where off-the-shelf tools or simple
+                automations are not enough. We clarify the problem, assess
+                feasibility and work with specialist partners to prototype or
+                pilot custom AI systems tied to measurable outcomes.
+              </p>
+              <p class="best-for">
+                Best for: "We have a bigger AI opportunity and need to prove it
+                properly."
+              </p>
+              <a class="card-link" href="#contact">Explore AI Build</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-light" aria-labelledby="use-cases-title">
+        <div class="section-inner">
+          <div class="section-heading compact section-heading-tight">
+            <p class="section-kicker">Use cases</p>
+            <h2 id="use-cases-title">What could you improve first?</h2>
+            <p>
+              AI works best when it’s attached to a specific workflow, task or
+              business pressure. If you already know the process causing
+              friction, we can assess whether it’s suitable for AI. If you’re
+              not sure where to start, we can help you find the best first
+              opportunity.
+            </p>
+          </div>
+          <div class="use-case-grid">
+            <article>
+              <span class="mini-icon" aria-hidden="true">
+                <svg><use href="#icon-search"></use></svg>
+              </span>
+              <h3>Lead research, enrichment and personalised outreach</h3>
+              <p>Find better-fit prospects and prepare sharper first-touch messaging.</p>
+            </article>
+            <article>
+              <span class="mini-icon" aria-hidden="true">
+                <svg><use href="#icon-document"></use></svg>
+              </span>
+              <h3>Proposal, report or document drafting workflows</h3>
+              <p>Speed up repeatable drafting while keeping review and judgement in place.</p>
+            </article>
+            <article>
+              <span class="mini-icon" aria-hidden="true">
+                <svg><use href="#icon-chat"></use></svg>
+              </span>
+              <h3>Internal knowledge assistants for policies and FAQs</h3>
+              <p>Help teams retrieve approved answers from trusted internal sources.</p>
+            </article>
+            <article>
+              <span class="mini-icon" aria-hidden="true">
+                <svg><use href="#icon-meeting"></use></svg>
+              </span>
+              <h3>Meeting notes, summaries and follow-up automation</h3>
+              <p>Turn calls and meetings into clearer actions, summaries and next steps.</p>
+            </article>
+            <article>
+              <span class="mini-icon" aria-hidden="true">
+                <svg><use href="#icon-crm"></use></svg>
+              </span>
+              <h3>CRM updates and sales admin workflows</h3>
+              <p>Reduce manual updates and keep pipeline data cleaner after key activities.</p>
+            </article>
+            <article>
+              <span class="mini-icon" aria-hidden="true">
+                <svg><use href="#icon-content"></use></svg>
+              </span>
+              <h3>Content repurposing and campaign support</h3>
+              <p>Adapt existing thinking into useful campaign assets and channel formats.</p>
+            </article>
+            <article>
+              <span class="mini-icon" aria-hidden="true">
+                <svg><use href="#icon-document"></use></svg>
+              </span>
+              <h3>Document triage, summarisation and review</h3>
+              <p>Prioritise, summarise and route documents without losing human oversight.</p>
+            </article>
+            <article>
+              <span class="mini-icon" aria-hidden="true">
+                <svg><use href="#icon-route"></use></svg>
+              </span>
+              <h3>Customer enquiry routing and response support</h3>
+              <p>Get enquiries to the right place faster with consistent response support.</p>
+            </article>
+            <article>
+              <span class="mini-icon" aria-hidden="true">
+                <svg><use href="#icon-enable"></use></svg>
+              </span>
+              <h3>Workflow playbooks and prompt libraries</h3>
+              <p>Create reusable guidance that helps teams use AI consistently day to day.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-dark" aria-labelledby="agents-title">
+        <div class="section-inner">
+          <div class="section-heading section-heading-tight">
+            <p class="section-kicker">Assistants and agents</p>
+            <h2 id="agents-title">
+              Useful AI agents start with clear boundaries
+            </h2>
+            <p>
+              AI agents are becoming a major part of the conversation, but not
+              every workflow needs autonomy. Wavanta focuses on practical
+              assistants and task-focused agents with defined responsibilities,
+              approved knowledge sources, clear limits and human review where
+              it matters.
+            </p>
+            <p>
+              The point isn’t to hand work over blindly. It’s to remove
+              avoidable manual effort while keeping quality, judgement and
+              accountability in the right place.
+            </p>
+          </div>
+          <div class="pattern-grid">
+            <article>
+              <span class="pattern-icon" aria-hidden="true">
+                <svg><use href="#icon-automate"></use></svg>
+              </span>
+              <h3>Automations</h3>
+              <p>
+                Move information, trigger repeatable steps and reduce manual
+                handoffs between tools.
+              </p>
+            </article>
+            <article>
+              <span class="pattern-icon" aria-hidden="true">
+                <svg><use href="#icon-chat"></use></svg>
+              </span>
+              <h3>Assistants</h3>
+              <p>
+                Help teams draft, summarise, search, analyse or retrieve
+                approved knowledge faster.
+              </p>
+            </article>
+            <article>
+              <span class="pattern-icon" aria-hidden="true">
+                <svg><use href="#icon-workflow"></use></svg>
+              </span>
+              <h3>Task-focused agents</h3>
+              <p>
+                Complete bounded tasks across tools with clear instructions,
+                defined limits and oversight.
+              </p>
+            </article>
+          </div>
+          <p class="closing-line">
+            The goal isn’t AI for its own sake. It’s smoother work, clearer
+            ownership and more time for higher-value decisions.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="approach" aria-labelledby="approach-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="section-kicker">How we work</p>
+            <h2 id="approach-title">
+              A practical route from first conversation to measurable value
+            </h2>
+          </div>
+          <ol class="step-list">
+            <li>
+              <h3>Start with the work</h3>
+              <p>
+                We look at the real workflow: people, tools, inputs, handoffs,
+                decisions, review points and outputs.
+              </p>
+            </li>
+            <li>
+              <h3>Choose the right level of AI</h3>
+              <p>
+                Not every problem needs a custom build or an agent. Sometimes
+                the right answer is training, prompts, a playbook, an
+                automation or a simple assistant.
+              </p>
+            </li>
+            <li>
+              <h3>Build in control from the start</h3>
+              <p>
+                We define guardrails, quality checks, data handling rules and
+                human review points so the work is safe and maintainable.
+              </p>
+            </li>
+            <li>
+              <h3>Deliver in focused phases</h3>
+              <p>
+                We favour small, fixed-scope engagements with clear outcomes
+                over open-ended programmes. That means faster feedback, earlier
+                proof and less risk.
+              </p>
+            </li>
+            <li>
+              <h3>Measure, learn and scale what works</h3>
+              <p>
+                Once a workflow is live, we review usage, impact and adoption
+                signals, then decide what to refine, repeat or scale next.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section section-light" aria-labelledby="why-title">
+        <div class="section-inner">
+          <div class="section-heading compact">
+            <p class="section-kicker">Why Wavanta</p>
+            <h2 id="why-title">Practical AI, built around real business work</h2>
+          </div>
+          <div class="reason-grid">
+            <article>
+              <span class="reason-icon" aria-hidden="true">
+                <svg><use href="#icon-workflow"></use></svg>
+              </span>
+              <h3>Workflow-first, not tool-first</h3>
+              <p>
+                We start with the work your teams already do, then design
+                around the tools, systems and constraints you already have.
+              </p>
+            </article>
+            <article>
+              <span class="reason-icon" aria-hidden="true">
+                <svg><use href="#icon-discover"></use></svg>
+              </span>
+              <h3>Flexible starting points</h3>
+              <p>
+                You can start with discovery, governance, training, automation
+                or a bespoke opportunity depending on the need in front of you.
+              </p>
+            </article>
+            <article>
+              <span class="reason-icon" aria-hidden="true">
+                <svg><use href="#icon-measure"></use></svg>
+              </span>
+              <h3>Safe, measurable implementation</h3>
+              <p>
+                We focus on practical outcomes: time saved, reduced effort,
+                faster turnaround and better consistency.
+              </p>
+            </article>
+            <article>
+              <span class="reason-icon" aria-hidden="true">
+                <svg><use href="#icon-control"></use></svg>
+              </span>
+              <h3>Designed for growing businesses</h3>
+              <p>
+                Small and mid-sized businesses need useful progress without
+                enterprise-level complexity, long timelines or unnecessary
+                spend.
+              </p>
+            </article>
+            <article>
+              <span class="reason-icon" aria-hidden="true">
+                <svg><use href="#icon-scale"></use></svg>
+              </span>
+              <h3>Built to scale sensibly</h3>
+              <p>
+                Every engagement is designed to create a reusable pattern, so
+                one successful workflow can become the basis for broader AI
+                capability.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="about" aria-labelledby="about-title">
+        <div class="section-inner about-layout">
+          <div>
+            <p class="section-kicker">About Wavanta</p>
+            <h2 id="about-title">
+              Grounded in hands-on AI adoption and B2B delivery
+            </h2>
+          </div>
+          <div class="copy-stack">
+            <p>
+              Wavanta was created to help growing businesses turn AI from vague
+              potential into practical, measurable improvements.
+            </p>
+            <p>
+              Our approach is shaped by hands-on experience leading AI
+              enablement, developing client-facing workshops and supporting
+              AI-led delivery in a fast-moving B2B environment.
+            </p>
+            <p>
+              We combine strategic messaging, workflow design, practical
+              implementation and modern AI tooling to help businesses move
+              AI from experiment to everyday capability without overcomplicating
+              the journey.
+            </p>
+          </div>
+          <aside class="founder-card" aria-label="Wavanta credibility">
+            <p class="founder-label">Built from practical delivery experience</p>
+            <h3>Strategy, workflow design and implementation in one place.</h3>
+            <div class="credibility-chips" aria-label="Wavanta areas of experience">
+              <span>AI enablement</span>
+              <span>Workflow design</span>
+              <span>B2B technology</span>
+              <span>Microsoft ecosystem</span>
+              <span>Automation strategy</span>
+              <span>Practical governance</span>
+            </div>
+            <ul>
+              <li>AI enablement and client-facing workshop experience</li>
+              <li>Workflow design shaped by real B2B delivery constraints</li>
+              <li>Practical tooling, governance and adoption support</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section section-light" id="insights" aria-labelledby="insights-title">
+        <div class="section-inner">
+          <div class="section-heading compact">
+            <p class="section-kicker">Insights</p>
+            <h2 id="insights-title">
+              Practical thinking on AI adoption and workflow improvement
+            </h2>
+          </div>
+          <div class="insight-grid">
+            <article>
+              <span class="coming-soon">Coming soon</span>
+              <h3>How to choose your first AI automation project</h3>
+              <p>
+                A practical guide to identifying workflows where AI can save
+                time, reduce rework and create measurable value.
+              </p>
+            </article>
+            <article>
+              <span class="coming-soon">Coming soon</span>
+              <h3>AI agents: what businesses should use them for now</h3>
+              <p>
+                A grounded look at task-focused agents, where they help and why
+                full autonomy is rarely the best starting point.
+              </p>
+            </article>
+            <article>
+              <span class="coming-soon">Coming soon</span>
+              <h3>What should go into an internal AI usage policy?</h3>
+              <p>
+                A practical overview of the guardrails businesses need before
+                AI usage spreads across teams.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="faq-title">
+        <div class="section-inner faq-layout">
+          <div>
+            <p class="section-kicker">FAQ</p>
+            <h2 id="faq-title">Frequently asked questions</h2>
+          </div>
+          <div class="faq-list">
+            <details>
+              <summary>Do you build AI agents?</summary>
+              <p>
+                Yes, where they make sense. We design task-focused AI agents
+                and assistants for clearly defined workflows such as lead
+                research, content drafting, internal knowledge search, triage,
+                reporting and CRM updates.
+              </p>
+              <p>
+                We don’t recommend full autonomy for every use case. Most
+                businesses get better results from bounded workflows with clear
+                inputs, outputs, approvals and human review.
+              </p>
+            </details>
+            <details>
+              <summary>Do we need an AI strategy before we start?</summary>
+              <p>
+                Not always. Some businesses need strategy or governance first,
+                especially if AI use is already widespread or sensitive data is
+                involved. Others can start with one carefully scoped workflow
+                and build the right controls around it.
+              </p>
+            </details>
+            <details>
+              <summary>
+                What kind of workflows are suitable for AI automation?
+              </summary>
+              <p>
+                Good candidates are usually repeatable, high-volume and manual.
+                They often involve research, drafting, summarising, checking,
+                routing, reporting or moving information between tools.
+              </p>
+            </details>
+            <details>
+              <summary>Will AI replace our team?</summary>
+              <p>
+                Our focus is augmentation, not replacement. We use AI to reduce
+                repetitive work, improve consistency and give people more time
+                for higher-value tasks.
+              </p>
+            </details>
+            <details>
+              <summary>How quickly can we see value?</summary>
+              <p>
+                Simple workflow improvements can show value within weeks when
+                the scope is clear. More complex automations, agents or custom
+                solutions need more planning, testing and oversight.
+              </p>
+            </details>
+            <details>
+              <summary>What tools do you work with?</summary>
+              <p>
+                We typically work with the tools your business already uses,
+                including Microsoft 365, Teams, SharePoint, Outlook, Excel, CRM
+                systems, automation platforms and approved AI tools.
+              </p>
+            </details>
+            <details>
+              <summary>Do we need to replace our existing systems?</summary>
+              <p>
+                No. Most businesses can create meaningful value by improving
+                workflows around existing systems. We usually add lightweight AI
+                and automation layers rather than replacing core platforms.
+              </p>
+            </details>
+            <details>
+              <summary>How do you measure success?</summary>
+              <p>
+                We define success upfront for each workflow. Typical measures
+                include time saved, reduced rework, faster turnaround, fewer
+                manual steps, improved consistency, reduced outsourcing costs
+                and stronger adoption.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-contact" id="contact" aria-labelledby="contact-title">
+        <div class="section-inner contact-grid">
+          <div>
+            <p class="section-kicker">Contact</p>
+            <h2 id="contact-title">Book a free AI<br />discovery call</h2>
+            <p>
+              Wherever you are with AI, Wavanta can help you find the right
+              next step. Use the form to tell us a little about your business,
+              your current challenges and what prompted you to get in touch.
+            </p>
+            <p>
+              We’ll use the call to explore two to three practical AI
+              opportunities and recommend a sensible starting point. No prep.
+              No obligation. No pressure.
+            </p>
+            <div class="contact-points" aria-label="What the call covers">
+              <span>Clarify the most practical starting point</span>
+              <span>Identify two to three AI opportunities</span>
+              <span>Leave with a sensible next step</span>
+            </div>
+          </div>
+          <!-- TODO: Add RESEND_API_KEY and CONTACT_FROM_EMAIL in Vercel so /api/contact can send submissions to hello@wavanta.ai. -->
+          <form
+            class="contact-form"
+            action="/api/contact"
+            method="post"
+          >
+            <label>
+              Full name
+              <input type="text" name="fullName" autocomplete="name" required />
+            </label>
+            <label>
+              Company name
+              <input type="text" name="companyName" autocomplete="organization" />
+            </label>
+            <label>
+              Work email
+              <input type="email" name="email" autocomplete="email" required />
+            </label>
+            <label>
+              What are you most interested in?
+              <select name="interest">
+                <option>Finding the right AI opportunity</option>
+                <option>Automating a workflow</option>
+                <option>Training or enabling my team</option>
+                <option>Creating AI policies or guardrails</option>
+                <option>Exploring AI assistants or agents</option>
+                <option>Scoping a bespoke AI solution</option>
+                <option>Not sure yet</option>
+              </select>
+            </label>
+            <label class="full-field">
+              What prompted you to get in touch?
+              <textarea name="message" rows="5"></textarea>
+            </label>
+            <button class="button button-primary" type="submit">
+              Book your discovery call
+            </button>
+            <p class="form-note">
+              We’ll only use your details to respond to your enquiry.
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="section-inner footer-grid">
+        <div>
+          <img
+            class="footer-logo"
+            src="/assets/wavanta-logo-white.png"
+            alt="Wavanta"
+            width="2036"
+            height="353"
+          />
+          <p>
+            Practical AI adoption, automation and enablement for growing
+            businesses.
+          </p>
+        </div>
+        <nav aria-label="Footer navigation">
+          <a href="#services">Services</a>
+          <a href="#approach">Approach</a>
+          <a href="#about">About</a>
+          <a href="#insights">Insights</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="footer-services">
+          <span>AI Discover</span>
+          <span>AI Automate</span>
+          <span>AI Enable</span>
+          <span>AI Govern</span>
+          <span>AI Build</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
